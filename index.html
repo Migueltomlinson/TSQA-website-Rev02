@@ -1044,7 +1044,7 @@
         <span>One Partner.</span>
       </h1>
       <p class="hero-sub">
-        TSQA delivers end-to-end risk management, safety systems, and quality assurance services across New Zealand — giving your business the protection and compliance it needs to operate with confidence.
+        TSQA delivers end-to-end risk management, safety systems, and quality assurance services across New Zealand giving your business the protection and compliance it needs to operate with confidence.
       </p>
       <div class="hero-actions">
         <a href="#" class="btn-primary" onclick="showPage('contact')">Get a Free Consultation</a>
@@ -1070,7 +1070,7 @@
           TSQA is a New Zealand-based health, safety, and quality consultancy. We work alongside SMEs and contractors to build the systems, plans, and documentation that protect your people, satisfy your clients, and keep your business compliant.
         </p>
         <p class="about-text">
-          What sets us apart is our end-to-end capability. From a first risk assessment through to pre-qualification, auditing, quality control, and document management — we cover both pillars of a well-run business under one roof.
+          What sets us apart is our end-to-end capability. From a first risk assessment through to pre-qualification, auditing, quality control, and document management. We cover both pillars of a well-run business under one roof.
         </p>
         <a href="#" class="btn-primary" style="margin-top:8px;" onclick="showPage('contact')">Work With Us</a>
       </div>
@@ -1100,7 +1100,7 @@
     <div class="nz-content">
       <div class="nz-flag">🇳🇿</div>
       <h2 class="nz-title">Serving businesses across all of New Zealand</h2>
-      <p class="nz-text">Whether you're a contractor in Auckland, an SME in Christchurch, or a project team anywhere in between — TSQA works with you on-site or remotely to get the job done.</p>
+      <p class="nz-text">Whether you're a contractor in Auckland, an SME in Christchurch, or a project team anywhere in between, TSQA works with you on-site or remotely to get the job done.</p>
     </div>
   </div>
 
@@ -1109,18 +1109,18 @@
     <div class="section-header reveal">
       <div class="section-label">Why TSQA</div>
       <h2 class="section-title">The complete picture, not half the solution</h2>
-      <p class="section-sub">Most consultants do safety or quality. We do both — and we build them together so nothing falls through the gaps.</p>
+      <p class="section-sub">Most consultants do safety or quality. We do both and we build them together so nothing falls through the gaps.</p>
     </div>
     <div class="diff-grid">
       <div class="diff-card reveal reveal-delay-1">
         <div class="diff-num">01</div>
         <div class="diff-title">End-to-End Service</div>
-        <p class="diff-text">Risk assessments, safety systems, pre-qualification, auditing, and quality control — all under one roof, all working together.</p>
+        <p class="diff-text">Risk assessments, safety systems, pre-qualification, auditing, and quality control all under one roof, all working together.</p>
       </div>
       <div class="diff-card reveal reveal-delay-2">
         <div class="diff-num">02</div>
         <div class="diff-title">Plain-Language Practical</div>
-        <p class="diff-text">We write and build things your team can actually use. No jargon, no filler — just clear systems that work in the real world.</p>
+        <p class="diff-text">We write and build things your team can actually use. No jargon, no filler just clear systems that work in the real world.</p>
       </div>
       <div class="diff-card reveal reveal-delay-3">
         <div class="diff-num">03</div>
@@ -1155,7 +1155,7 @@
 
   <div class="services-hero">
     <h1>Our Services</h1>
-    <p>From first risk assessment to full quality management — everything your business needs to operate safely, compliantly, and confidently.</p>
+    <p>From first risk assessment to full quality management everything your business needs to operate safely, compliantly, and confidently.</p>
   </div>
 
   <div class="services-body">
@@ -1520,7 +1520,7 @@
   }
 
   // ── FORM ──
-  function submitForm() {
+  async function submitForm() {
     const required = ['f-first', 'f-email', 'f-service'];
     let valid = true;
     required.forEach(id => {
@@ -1533,8 +1533,38 @@
     });
     if (!valid) return;
 
-    document.getElementById('contactFormWrap').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const data = {
+      firstName: document.getElementById('f-first').value,
+      lastName: document.getElementById('f-last').value,
+      company: document.getElementById('f-company').value,
+      email: document.getElementById('f-email').value,
+      phone: document.getElementById('f-phone').value,
+      service: document.getElementById('f-service').value,
+      message: document.getElementById('f-message').value
+    };
+
+    try {
+      const response = await fetch('https://formspree.io/f/xvznypvy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById('contactFormWrap').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Something went wrong. Try again.';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      btn.textContent = 'Something went wrong. Try again.';
+      btn.disabled = false;
+    }
   }
 
   // ── INIT ──
