@@ -21,6 +21,7 @@ BUILD = os.path.join(ROOT, "build")
 BASE = "https://tsqa.co.nz"
 
 EMAIL = "contact@tsqa.co.nz"
+ASSET_VERSION = "20260713"  # bump to bust Cloudflare/browser cache on CSS/JS changes
 PHONE_DISPLAY = "021 125 8705"
 PHONE_TEL = "+64211258705"
 PHONE_SCHEMA = "+64 21 125 8705"
@@ -339,8 +340,8 @@ def render_page(out_path, title, description, canonical, body, ld_blocks,
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
-<script src="/site.js" defer></script>
+<link rel="stylesheet" href="/styles.css?v={ASSET_VERSION}">
+<script src="/site.js?v={ASSET_VERSION}" defer></script>
 {ld}
 </head>
 <body>
