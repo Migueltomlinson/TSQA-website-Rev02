@@ -21,7 +21,7 @@ BUILD = os.path.join(ROOT, "build")
 BASE = "https://tsqa.co.nz"
 
 EMAIL = "contact@tsqa.co.nz"
-ASSET_VERSION = "20260713"  # bump to bust Cloudflare/browser cache on CSS/JS changes
+ASSET_VERSION = "20260713b"  # bump to bust Cloudflare/browser cache on CSS/JS changes
 PHONE_DISPLAY = "021 125 8705"
 PHONE_TEL = "+64211258705"
 PHONE_SCHEMA = "+64 21 125 8705"
@@ -894,8 +894,10 @@ def build_prequal():
 def build_contact():
     trail = [("Home", "/"), ("Contact", "/contact/")]
     src = read_src("contact")
+    # Process band sits directly under the hero (dark on dark), then the
+    # breadcrumb leads into the white contact body.
     src = src.replace('<div class="contact-body">',
-                      breadcrumb_html(trail) + '\n\n' + PROCESS_SECTION
+                      PROCESS_SECTION + '\n\n' + breadcrumb_html(trail)
                       + '\n\n  <div class="contact-body">', 1)
     body = "<main>\n\n  " + src + "\n\n</main>"
     ld = [professional_service_ld(), breadcrumb_ld(trail)]

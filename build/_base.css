@@ -1294,6 +1294,7 @@
     background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
     padding: 80px 5%;
     text-align: center;
+    border-top: 1px solid rgba(138,154,181,0.18);
   }
   .process-inner { max-width: 1000px; margin: 0 auto; }
   .process-title {
@@ -1346,7 +1347,15 @@
   }
 
   @media (max-width: 760px) {
-    .process-title { flex-direction: column; align-items: stretch; gap: 12px; }
-    .process-step { max-width: none; min-height: 0; padding: 20px; }
-    .process-arrow { transform: rotate(90deg); }
+    .process-flow { padding: 50px 5%; }
+    .process-title { flex-direction: column; align-items: stretch; gap: 10px; }
+    .process-step {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: none;
+      min-height: 0;
+      padding: 16px 18px;
+      font-size: 1rem;
+    }
+    .process-arrow { transform: rotate(90deg); font-size: 1.3rem; }
   }
