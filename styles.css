@@ -114,9 +114,10 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    padding: 14px 10px;
-    background: none;
-    border: none;
+    padding: 11px 12px;
+    background: transparent;
+    border: 1.5px solid var(--white);
+    border-radius: 6px;
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
@@ -126,7 +127,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--silver-light);
+    background: var(--white);
     transition: all 0.3s ease;
   }
 
