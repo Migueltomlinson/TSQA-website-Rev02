@@ -297,6 +297,20 @@ FOOTER_HTML = """<footer>
   <div class="footer-copy">&copy; 2026 TSQA. All rights reserved. New Zealand.</div>
 </footer>"""
 
+# Simple three-step pricing process block (no figures, builds trust).
+PROCESS_SECTION = """  <section class="process-flow reveal" aria-labelledby="process-heading">
+    <div class="process-inner">
+      <h2 class="process-title" id="process-heading">
+        <span class="process-step">Free Consultation</span>
+        <span class="process-arrow" aria-hidden="true">&rarr;</span>
+        <span class="process-step">Fixed-Price Proposal</span>
+        <span class="process-arrow" aria-hidden="true">&rarr;</span>
+        <span class="process-step">We Do the Work</span>
+      </h2>
+      <p class="process-sub">No obligation, no hidden hourly rates. You will know the full cost before we start.</p>
+    </div>
+  </section>"""
+
 
 def render_page(out_path, title, description, canonical, body, ld_blocks,
                 gsc=False):
@@ -803,6 +817,8 @@ def build_home():
     </div>
   </section>
 
+{PROCESS_SECTION}
+
   <section class="home-cta reveal">
     <h2>Ready to protect your business?</h2>
     <p>Talk to the team at TSQA about your health, safety, or quality needs. We'll tell you exactly what you need and how we can help.</p>
@@ -878,7 +894,8 @@ def build_contact():
     trail = [("Home", "/"), ("Contact", "/contact/")]
     src = read_src("contact")
     src = src.replace('<div class="contact-body">',
-                      breadcrumb_html(trail) + '\n\n  <div class="contact-body">', 1)
+                      breadcrumb_html(trail) + '\n\n' + PROCESS_SECTION
+                      + '\n\n  <div class="contact-body">', 1)
     body = "<main>\n\n  " + src + "\n\n</main>"
     ld = [professional_service_ld(), breadcrumb_ld(trail)]
     render_page("contact/index.html",

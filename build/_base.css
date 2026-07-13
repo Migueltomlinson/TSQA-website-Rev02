@@ -114,7 +114,13 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    padding: 4px;
+    padding: 14px 10px;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    line-height: 0;
   }
   .hamburger span {
     display: block;
@@ -1281,3 +1287,65 @@
   a.pillar-card { text-decoration: none; color: inherit; display: block; }
   .diff-text a, .about-text a { color: var(--accent); text-decoration: underline; }
   .diff-text a:hover, .about-text a:hover { color: var(--accent-light); }
+
+  /* ── PRICING PROCESS FLOW ── */
+  .process-flow {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    padding: 80px 5%;
+    text-align: center;
+  }
+  .process-inner { max-width: 1000px; margin: 0 auto; }
+  .process-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+  }
+  .process-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 220px;
+    max-width: 280px;
+    min-height: 90px;
+    padding: 22px 20px;
+    background: rgba(138,154,181,0.08);
+    border: 1px solid rgba(138,154,181,0.28);
+    border-radius: 10px;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .process-step:hover {
+    border-color: var(--accent);
+    background: rgba(74,111,165,0.14);
+  }
+  .process-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--silver);
+    font-size: 1.6rem;
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+  .process-sub {
+    max-width: 640px;
+    margin: 30px auto 0;
+    color: var(--silver-light);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 760px) {
+    .process-title { flex-direction: column; align-items: stretch; gap: 12px; }
+    .process-step { max-width: none; min-height: 0; padding: 20px; }
+    .process-arrow { transform: rotate(90deg); }
+  }
