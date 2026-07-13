@@ -53,6 +53,18 @@ SERVICES["ISO 45001 System Setup"] = (
     "system is structured, practical, and ready to perform."
 )
 
+# Approved reword of the SHE Pre-Qual description to lead with the fact that it
+# now runs on the Totika-accredited framework (replaces the earlier verbatim copy).
+SERVICES["SHE Pre-Qual"] = (
+    "SHE Pre-Qual is a health and safety pre-qualification pathway widely used "
+    "across the building and construction sector, and it now operates on the "
+    "Totika-accredited framework, using Totika categories and pricing. Many "
+    "councils require contractors to hold a valid SHE assessment before "
+    "undertaking high-risk or long-term work. TSQA helps you build and evidence "
+    "an active safety management system that meets SHE Pre-Qual standards, not "
+    "just on paper, but demonstrably in practice."
+)
+
 
 def plain(text):
     """HTML string -> plain text for JSON-LD (decode entities, strip tags)."""
