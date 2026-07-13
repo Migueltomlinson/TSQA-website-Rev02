@@ -20,7 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD = os.path.join(ROOT, "build")
 BASE = "https://tsqa.co.nz"
 
-EMAIL = "contact.tsqa@gmail.com"
+EMAIL = "contact@tsqa.co.nz"
 PHONE_DISPLAY = "021 125 8705"
 PHONE_TEL = "+64211258705"
 PHONE_SCHEMA = "+64 21 125 8705"
