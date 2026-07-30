@@ -21,7 +21,7 @@ BUILD = os.path.join(ROOT, "build")
 BASE = "https://tsqa.co.nz"
 
 EMAIL = "contact@tsqa.co.nz"
-ASSET_VERSION = "20260713b"  # bump to bust Cloudflare/browser cache on CSS/JS changes
+ASSET_VERSION = "20260714"  # bump to bust Cloudflare/browser cache on CSS/JS changes
 PHONE_DISPLAY = "021 125 8705"
 PHONE_TEL = "+64211258705"
 PHONE_SCHEMA = "+64 21 125 8705"
@@ -273,6 +273,7 @@ NAV_HTML = """<header>
       </ul>
     </li>
     <li><a href="/documents/">Documents</a></li>
+    <li><a href="/blog/">Blog</a></li>
     <li><a href="/contact/" class="nav-cta">Get in Touch</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
@@ -290,6 +291,7 @@ FOOTER_HTML = """<footer>
     <a href="/pre-qualification/">Pre-Qualification</a>
     <a href="/quality/">Quality</a>
     <a href="/documents/">Documents</a>
+    <a href="/blog/">Blog</a>
     <a href="/contact/">Contact</a>
     <a href="/terms/">Terms &amp; Conditions</a>
     <a href="/privacy/">Privacy Policy</a>
@@ -1161,6 +1163,8 @@ SITEMAP_PAGES = [
     ("/quality/quality-assurance/", "0.8"),
     ("/quality/quality-control/", "0.8"),
     ("/documents/", "0.7"),
+    ("/blog/", "0.8"),
+    ("/blog/health-and-safety-basics-for-nz-contractors/", "0.7"),
     ("/contact/", "0.7"),
     ("/terms/", "0.3"),
     ("/privacy/", "0.3"),
