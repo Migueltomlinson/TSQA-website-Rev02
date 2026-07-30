@@ -1,0 +1,59 @@
+---
+layout: default
+permalink: /blog/
+title: Blog
+seo_title: TSQA Blog | Health, Safety & Quality Insights NZ
+description: Practical health, safety, quality, and contractor pre-qualification insights for New Zealand SMEs and contractors from the TSQA team.
+---
+<main>
+
+  <div class="services-hero">
+    <h1>TSQA Blog</h1>
+    <p>Practical health, safety, quality, and pre-qualification insights for New Zealand businesses.</p>
+  </div>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Blog</li>
+    </ol>
+  </nav>
+
+  <section class="blog-index">
+    <div class="blog-list">
+      {% for post in site.posts %}
+      <a class="blog-card" href="{{ post.url }}">
+        <div class="post-date">{{ post.date | date: "%-d %B %Y" }}</div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
+        <span class="read-more">Read more &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "TSQA Blog",
+    "url": "https://tsqa.co.nz/blog/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TSQA",
+      "logo": { "@type": "ImageObject", "url": "https://tsqa.co.nz/images/logo.jpg" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tsqa.co.nz/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tsqa.co.nz/blog/" }
+    ]
+  }
+  </script>
+
+</main>

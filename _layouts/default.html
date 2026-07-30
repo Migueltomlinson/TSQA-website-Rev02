@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found | TSQA</title>
-<meta name="description" content="The page you were looking for could not be found. Return to the TSQA home page or get in touch with our team.">
-<link rel="canonical" href="https://tsqa.co.nz/404.html">
+<title>{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | TSQA{% endif %}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta name="robots" content="index, follow">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 <meta property="og:site_name" content="TSQA">
-<meta property="og:title" content="Page Not Found | TSQA">
-<meta property="og:description" content="The page you were looking for could not be found. Return to the TSQA home page or get in touch with our team.">
-<meta property="og:url" content="https://tsqa.co.nz/404.html">
+<meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | TSQA{% endif %}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="https://tsqa.co.nz/images/tsqa-logo-og.jpg">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -33,46 +33,16 @@
   "slogan": "Protecting People, Perfecting Process",
   "description": "TSQA is a New Zealand health, safety, and quality assurance consultancy helping SMEs and contractors with risk management, safety systems, pre-qualification, auditing, and quality control.",
   "areaServed": [
-    {
-      "@type": "AdministrativeArea",
-      "name": "Bay of Plenty"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Waikato"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Auckland"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Taranaki"
-    },
-    {
-      "@type": "Country",
-      "name": "New Zealand"
-    }
+    { "@type": "AdministrativeArea", "name": "Bay of Plenty" },
+    { "@type": "AdministrativeArea", "name": "Waikato" },
+    { "@type": "AdministrativeArea", "name": "Auckland" },
+    { "@type": "AdministrativeArea", "name": "Taranaki" },
+    { "@type": "Country", "name": "New Zealand" }
   ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "NZ"
-  },
-  "knowsAbout": [
-    "Health and safety management",
-    "ISO 45001",
-    "ISO 9001",
-    "Contractor pre-qualification",
-    "IMPAC PREQUAL",
-    "SiteWise",
-    "SHE Pre-Qual",
-    "Totika",
-    "Quality assurance",
-    "Quality control",
-    "Auditing"
-  ]
+  "address": { "@type": "PostalAddress", "addressCountry": "NZ" }
 }
 </script>
+{{ page.head_jsonld }}
 </head>
 <body>
 
@@ -111,16 +81,7 @@
 </nav>
 </header>
 
-<main>
-  <section class="notfound">
-    <h1>404</h1>
-    <p>Sorry, we couldn't find that page. It may have moved or no longer exists.</p>
-    <div class="hero-actions" style="justify-content:center;">
-      <a href="/" class="btn-primary">Back to Home</a>
-      <a href="/contact/" class="btn-secondary">Contact TSQA</a>
-    </div>
-  </section>
-</main>
+{{ content }}
 
 <footer>
   <img src="/images/logo.jpg" alt="TSQA logo" class="footer-logo" width="64" height="64" loading="lazy">

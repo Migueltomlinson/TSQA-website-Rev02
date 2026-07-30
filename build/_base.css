@@ -1359,3 +1359,64 @@
     }
     .process-arrow { transform: rotate(90deg); font-size: 1.3rem; }
   }
+
+  /* ── BLOG ── */
+  .blog-index { max-width: 1000px; margin: 0 auto; padding: 24px 5% 70px; }
+  .blog-list { display: grid; gap: 24px; }
+  .blog-card {
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(138,154,181,0.25);
+    border-radius: 12px;
+    padding: 30px 32px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(26,42,74,0.12);
+    border-color: var(--accent);
+  }
+  .blog-card .post-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .blog-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+  .blog-card p { color: var(--text-light); font-size: 0.98rem; line-height: 1.7; }
+  .blog-card .read-more {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+
+  .blog-body { max-width: 760px; margin: 0 auto; padding: 30px 5% 10px; }
+  .blog-body p { color: var(--text-body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 20px; }
+  .blog-body h2 { font-family: 'Montserrat', sans-serif; color: var(--navy); font-size: 1.5rem; margin: 36px 0 14px; }
+  .blog-body h3 { font-family: 'Montserrat', sans-serif; color: var(--navy); font-size: 1.2rem; margin: 28px 0 12px; }
+  .blog-body ul, .blog-body ol { margin: 0 0 20px 22px; color: var(--text-body); line-height: 1.8; }
+  .blog-body li { margin-bottom: 8px; }
+  .blog-body a { color: var(--accent); text-decoration: underline; }
+  .blog-body a:hover { color: var(--accent-light); }
+  .blog-body strong { color: var(--navy); }
+  .blog-body blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 6px 20px;
+    margin: 0 0 20px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+  .blog-body img { max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0 20px; }
+  .blog-body code { background: var(--silver-bright); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }

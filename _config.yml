@@ -1,0 +1,32 @@
+# Jekyll configuration for the TSQA blog.
+#
+# IMPORTANT: This site is a hand-built static HTML site. GitHub Pages already
+# runs Jekyll on it (there is no .nojekyll file), and every existing HTML page
+# has NO YAML front matter, so Jekyll copies those pages to the output byte for
+# byte and never processes them. This config only powers the /blog/ section.
+#
+# Nothing here applies a layout or default to the existing pages: the `defaults`
+# block below is scoped to `type: posts` only.
+
+title: TSQA
+description: >-
+  Health, safety, quality, and contractor pre-qualification insights for
+  New Zealand SMEs and contractors from the TSQA team.
+
+# Non-www custom domain. Used to build absolute canonical / Open Graph URLs.
+url: "https://tsqa.co.nz"
+baseurl: ""
+
+# Blog posts resolve at /blog/<slug>/
+permalink: /blog/:title/
+
+# Apply the post layout ONLY to items in _posts. Existing HTML pages are
+# untouched because they have no front matter and this default is type-scoped.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+markdown: kramdown
