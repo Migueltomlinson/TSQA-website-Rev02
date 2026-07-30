@@ -1164,6 +1164,7 @@ SITEMAP_PAGES = [
     ("/quality/quality-control/", "0.8"),
     ("/documents/", "0.7"),
     ("/blog/", "0.8"),
+    ("/blog/health-and-safety-law-has-changed-what-it-means-for-your-business/", "0.7"),
     ("/blog/health-and-safety-basics-for-nz-contractors/", "0.7"),
     ("/contact/", "0.7"),
     ("/terms/", "0.3"),

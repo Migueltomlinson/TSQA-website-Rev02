@@ -20,6 +20,12 @@ baseurl: ""
 # Blog posts resolve at /blog/<slug>/
 permalink: /blog/:title/
 
+# Interpret post dates in New Zealand time, and publish posts even if their
+# date is slightly ahead of the build server's clock (avoids a post dated
+# "today/tomorrow" in NZ being skipped when GitHub Pages builds in UTC).
+timezone: Pacific/Auckland
+future: true
+
 # Apply the post layout ONLY to items in _posts. Existing HTML pages are
 # untouched because they have no front matter and this default is type-scoped.
 defaults:
