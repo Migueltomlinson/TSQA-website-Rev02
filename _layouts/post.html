@@ -21,6 +21,16 @@ og_type: article
     {{ content }}
   </article>
 
+  {% if page.related_service_url %}
+  <section class="related-links reveal">
+    <h2>Related service</h2>
+    <div class="related-grid">
+      <a href="{{ page.related_service_url }}">{{ page.related_service_name }}</a>
+      <a href="/contact/">Talk to TSQA</a>
+    </div>
+  </section>
+  {% endif %}
+
   <div class="services-cta-bar reveal">
     <h2>Talk to TSQA about your health and safety needs</h2>
     <p>Get practical help with risk, safety systems, pre-qualification, auditing, and quality.</p>
@@ -35,7 +45,7 @@ og_type: article
     "description": {{ page.description | jsonify }},
     "datePublished": "{{ page.date | date_to_xmlschema }}",
     "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-    "image": "https://tsqa.co.nz/images/tsqa-logo-og.jpg",
+    "image": {{ page.image | default: "/images/tsqa-logo-og.jpg" | absolute_url | jsonify }},
     "author": { "@type": "Organization", "name": "TSQA", "url": "https://tsqa.co.nz/" },
     "publisher": {
       "@type": "Organization",

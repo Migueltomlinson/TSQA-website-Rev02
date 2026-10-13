@@ -3,6 +3,8 @@ layout: post
 title: "Working Alone: Four Things WorkSafe Says You Must Confirm, Not Assume"
 date: 2026-09-16
 description: "A recent WorkSafe prosecution shows what happens when competence and lone worker check-ins are assumed rather than confirmed. Here is what to fix this week."
+related_service_url: /health-safety/risk-management/
+related_service_name: "Risk & Safety Management"
 ---
 
 Most of the time, sending someone out on their own is completely normal. A fitter goes to a client site alone. A technician does a callout after hours. A contractor finishes a job while everyone else has gone home. None of that is illegal, and for a lot of small businesses it is simply how the work gets done.

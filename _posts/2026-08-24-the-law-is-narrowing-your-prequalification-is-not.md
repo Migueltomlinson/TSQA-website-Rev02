@@ -3,6 +3,8 @@ layout: post
 title: "The Law Is Narrowing. Your Pre-Qualification Isn't."
 date: 2026-08-24
 description: "The 2026 reform narrows duties for small NZ businesses, but SiteWise now asks for more. How to avoid dropping a grade and losing work."
+related_service_url: /pre-qualification/
+related_service_name: "Contractor Pre-Qualification Support"
 ---
 
 There is a quiet trap sitting between two changes that happened this year, and a lot of small contractors are going to walk straight into it.

@@ -3,6 +3,8 @@ layout: post
 title: "Health and Safety Law Changes on 1 April 2027: What Your Business Should Do Now"
 date: 2026-10-11
 description: "The Health and Safety at Work Amendment Act 2026 starts 1 April 2027. Here is what changes for NZ SMEs and contractors, and six steps to take now."
+related_service_url: /health-safety/safety-systems/
+related_service_name: "Safety Systems & Preparedness"
 ---
 
 The Health and Safety at Work Amendment Act 2026 was passed on 1 July 2026. Most of it starts on 1 April 2027. That feels like a long way off, but if you run a small business or contract to bigger ones, there is real work to do before then. Doing nothing is the most expensive option.

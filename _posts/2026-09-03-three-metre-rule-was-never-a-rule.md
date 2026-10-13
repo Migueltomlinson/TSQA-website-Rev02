@@ -3,6 +3,8 @@ layout: post
 title: "The Three Metre Rule Was Never a Rule: What WorkSafe's New Height Guidance Means for Your Site"
 date: 2026-09-03
 description: "WorkSafe's updated working at height guidance confirms there is no safe fall height. Here is what NZ contractors and SMEs need to fix before an audit or an incident."
+related_service_url: /health-safety/risk-management/
+related_service_name: "Risk & Safety Management"
 ---
 
 Ask ten tradespeople in the Bay of Plenty what the height rule is and most will tell you the same thing: you need fall protection above three metres. It is one of the most persistent myths in New Zealand construction, and WorkSafe has just spent an entire guidance rewrite pulling it apart.

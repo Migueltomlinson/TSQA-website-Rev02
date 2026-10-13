@@ -3,6 +3,8 @@ layout: post
 title: "A WorkSafe Inspector Just Handed You a Notice. What Happens Next Decides Everything."
 date: 2026-09-07
 description: "An Auckland builder was fined $38,500 for working through a prohibition notice. Here is what to do in the first 48 hours after WorkSafe issues one."
+related_service_url: /health-safety/auditing/
+related_service_name: "Auditing & Compliance"
 ---
 
 An Auckland construction company was fined $38,500 last month for a mistake that took about five minutes to make.

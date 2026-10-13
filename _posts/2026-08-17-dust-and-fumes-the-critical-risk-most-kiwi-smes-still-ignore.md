@@ -3,6 +3,8 @@ layout: post
 title: "Dust and Fumes: The Critical Risk Most Kiwi SMEs Still Ignore"
 date: 2026-08-17
 description: "WorkSafe's new workplace exposure standards guidance lands just as critical risk becomes the centre of NZ health and safety law. Here is what SMEs should do."
+related_service_url: /health-safety/risk-management/
+related_service_name: "Risk & Safety Management"
 ---
 
 You can see a fall from height. You can see an unguarded machine. You cannot see the thing that kills more New Zealand workers than either of them.

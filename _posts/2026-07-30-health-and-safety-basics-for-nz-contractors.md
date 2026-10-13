@@ -3,6 +3,8 @@ title: "Health and Safety Basics Every New Zealand Contractor Should Get Right"
 seo_title: "Health & Safety Basics for NZ Contractors | TSQA"
 description: "A practical starting point for NZ contractors: the core health and safety systems, records, and habits that keep your people safe and your business work-ready."
 date: 2026-07-30
+related_service_url: /health-safety/risk-management/
+related_service_name: "Risk & Safety Management"
 ---
 
 For many New Zealand contractors, health and safety can feel like a moving target. New clients ask for different paperwork, pre-qualification schemes want evidence you are not sure you have, and the day job still has to get done. The good news is that a genuinely safe business and a work-ready one are built on the same foundations. Get the basics right and most of the rest follows.

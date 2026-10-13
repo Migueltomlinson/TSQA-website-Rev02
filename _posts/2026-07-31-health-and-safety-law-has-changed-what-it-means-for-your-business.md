@@ -4,6 +4,8 @@ title: "The Health and Safety Law Has Changed. Here Is What It Means for Your Bu
 seo_title: "NZ Health & Safety Law Change 2026 | TSQA"
 date: 2026-07-31
 description: "The Health and Safety at Work Amendment Act 2026 adds a small PCBU category and refocuses WorkSafe. Less paperwork, not less risk. Here is what to do."
+related_service_url: /health-safety/safety-systems/
+related_service_name: "Safety Systems & Preparedness"
 ---
 
 If you run a small business or work as a contractor in New Zealand, the health and safety rules you operate under have just changed. The Health and Safety at Work Amendment Act 2026 received Royal Assent on 9 July 2026, and the main changes take effect on 1 April 2027. This is the biggest shift since the Health and Safety at Work Act 2015 came in, and a lot of the coverage has been noisy and confusing. Here is the plain version, and what it actually means for the way you work.

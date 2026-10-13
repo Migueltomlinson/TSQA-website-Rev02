@@ -12,8 +12,8 @@
 <meta property="og:title" content="{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} | TSQA{% endif %}">
 <meta property="og:description" content="{{ page.description }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="https://tsqa.co.nz/images/tsqa-logo-og.jpg">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{{ page.image | default: '/images/tsqa-logo-og.jpg' | absolute_url }}">
+<meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
